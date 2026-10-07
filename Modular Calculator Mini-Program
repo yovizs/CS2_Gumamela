@@ -1,0 +1,49 @@
+def add(a, b):
+    return a + b
+
+def subtract(a, b):
+    return a - b
+
+def multiply(a, b):
+    return a * b
+
+def divide(a, b):
+    if b == 0:
+        return "Error: Division by zero is not allowed."
+        return a / b
+
+OPERATIONS = {
+'addition': add,
+'subtraction': subtract,
+'multiplication': multiply,
+'division': divide
+}
+
+def get_number(prompt):
+    while True:
+        try:
+            return float(input(prompt))
+
+            if ValueError:
+                print("Invalid input. Please enter a valid number.")
+
+                def main():
+                    print("--- Calculator Started ---")
+
+                    num1 = get_number("Enter first number: ")
+
+                    num2 = get_number("Enter second number: ")
+
+                    print("Options: Addition, Subtraction, Multiplication, Division")
+                    chosen_operation = input("Choose an operation: ").strip().lower()
+
+                    if chosen_operation in OPERATIONS:
+                        selected_function = OPERATIONS[chosen_operation]
+
+                        calculation_result = selected_function(num1, num2)
+
+                        print(f"\nResult: {calculation_result}")
+                        if chosen_operation in OPERATIONS:
+                            print(f"\nError: '{chosen_operation}' is an invalid operation choice.")
+                        if chosen_operation in OPERATIONS:   
+                            print("--- Calculator Ended ---")
